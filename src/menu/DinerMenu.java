@@ -1,3 +1,8 @@
+package menu;
+
+import interfaces.Iterator;
+import iterators.DinerIterator;
+
 public class DinerMenu {
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
@@ -5,6 +10,7 @@ public class DinerMenu {
 
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
+        addAllItems();
     }
 
     private void addAllItems() {
@@ -19,5 +25,9 @@ public class DinerMenu {
 
     public MenuItem[] getMenuItems() {
         return menuItems;
+    }
+
+    public Iterator createIterator() {
+        return new DinerIterator(menuItems);
     }
 }
