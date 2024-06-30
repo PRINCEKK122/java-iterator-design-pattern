@@ -1,12 +1,13 @@
 package menu;
 
 import interfaces.Iterator;
+import interfaces.Menu;
 import iterators.PancakeIterator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     private final List<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
@@ -19,7 +20,6 @@ public class PancakeHouseMenu {
         addItem(new MenuItem("Pancake2", "Pancake2 description", false, 14.99));
         addItem(new MenuItem("Pancake3", "Pancake3 description", true, 8.99));
         addItem(new MenuItem("Pancake4", "Pancake4 description", true, 18.99));
-
     }
 
     public void addItem(MenuItem item) {

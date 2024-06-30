@@ -1,9 +1,10 @@
 package menu;
 
 import interfaces.Iterator;
+import interfaces.Menu;
 import iterators.DinerIterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
     private final MenuItem[] menuItems;
