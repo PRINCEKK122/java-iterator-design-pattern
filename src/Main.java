@@ -20,7 +20,7 @@ public class Main {
 
         for (int i = 0; i < menuItems.size(); i++) {
             var menuItem = menuItems.get(i);
-            printItems(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
+            printMenu(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
         }
     }
 
@@ -33,18 +33,18 @@ public class Main {
 
             if (menuItem == null) break;
 
-            printItems(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
+            printMenu(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
         }
     }
 
     private static void printIteratorMenu(Iterator iterator) {
         while (iterator.hasNext()) {
             var menuItem = iterator.next();
-            printItems(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
+            printMenu(menuItem.getName(), menuItem.getDescription(), menuItem.getPrice());
         }
     }
 
-    private static void printItems(String name, String description, double price) {
+    private static void printMenu(String name, String description, double price) {
         System.out.print(name + " ");
         System.out.println("$" + price);
         System.out.println(description + "\n");
